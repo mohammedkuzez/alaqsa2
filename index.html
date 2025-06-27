@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+        }
+        body {
+            font-family: sans-serif;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4rem;
+            padding: 10px 60px;
+            background-color: white;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        header h3 {
+            color: orange;
+            margin-left: auto;
+        }
+        header ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            color: black;
+        }
+        header li a {
+            text-decoration: none;
+            color: black;
+        }
+        header li a:hover {
+            color: orange;
+        }
+        section.title {
+            background-image: url("./alaqsa4.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 800px;
+            width: 100%;
+            padding: 6rem;
+        }
+        section.description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5rem;
+            padding: 5rem 0;
+        }
+        section.description img {
+            border-radius: 5px;
+            width: 30rem;
+        }
+        .margin_auto {
+            width: 10px;
+            margin: 0 auto;
+
+        }
+        section.description h3 {
+            color: orange;
+        }
+        section.description p {
+            margin-top: 1rem;
+            font-size: .5rem;
+            /* width: 24rem; */
+        }
+        .text_container {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            width: 18rem;
+        }
+        section.donation {
+            background-image: url("distraction1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.5rem;
+            height: 20rem;
+        }
+        section.donation h3 {
+            color: orange;
+        }
+        section.donation p {
+            color: white;
+        }
+        section.donation button {
+            padding: .3rem 1rem;
+            background-color: rgba(255, 166, 0, 0.779);
+            border: none;
+            border-radius: 4px;
+            color: white;
+        }
+        section.boycott_product {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        section.boycott_product h3 {
+            margin: 3rem auto;
+            color: orange;
+        }
+        .card_container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            width: 15rem;
+            height: 26rem;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            padding: 1rem;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .card1 {
+            background-image: url("unnamed.png");
+        }
+        .card2 {
+            background-image: url("mac2.jpg");
+        }
+        .card3 {
+            background-image: url("Coca_Cola_Can.png");
+        }
+        .card img {
+            width: 100%;
+        }
+        .card p {
+            /* margin-left: auto; */
+            font-size: .8rem;
+            align-self: flex-end;
+        }
+        .tag {
+            margin-top: 1rem;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 25%;
+            padding: .2rem 0.5rem;
+            cursor: pointer;
+        }
+        .detail {
+            align-self: center;
+            margin-top: 1rem;
+            width: 100%;
+            background-color: navy;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: .2rem 0.5rem;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 3rem;
+            color: white;
+            width: 100%;
+            background-color: rgb(36, 36, 36);
+            display: flex;
+            padding: 3rem;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 9rem;
+        }
+        .footer_title p {
+            color: rgba(255, 255, 255, 0.664);
+            font-size: .8rem;
+        }
+        .copy_right {
+            display: block;
+            color: white;
+            background-color: rgb(36, 36, 36);
+        }
+        .line {
+            margin: 0 auto;
+            width: 80%;
+            height: 0.5px;
+            background-color: rgba(255, 255, 255, 0.552);
+        }
+        .copy_right p {
+            margin: 0 auto;
+            width: fit-content;
+            padding: 1rem;
+        }
+        a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.573);
+        }
+        ul  {
+            list-style: none;
+        }
+        .connect_with_us {
+            font-size: .7rem;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        .connect_with_us h4 {
+            font-size: 1rem;
+        }
+        .fast_link, .fast_link ul {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        .social_media ul li{
+            display: inline-block;
+            margin-left: .5rem;
+        }
+        .hamburger-wrapper {
+            position: relative;
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            font-size: 28px;
+            user-select: none;
+        }
+        .side-menu {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #444;
+            padding: 15px;
+            display: none;
+            flex-direction: column;
+            border-radius: 4px;
+            min-width: 150px;
+            z-index: 1000;
+        }
+        .side-menu a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .hamburger-wrapper:hover .side-menu {
+            display: flex;
+        }
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger-wrapper {
+                display: block;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>فلسطين</h3>
+            <ul class="nav-links">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">عن فلسطين</a></li>
+                <li><a href="#">المعالم</a></li>
+                <li><a href="#">التبرع</a></li>
+                <li><a href="#">تواصل معنا</a></li>
+            </ul>
+            <div class="hamburger-wrapper">
+                <div class="hamburger">&#9776;</div>
+                <aside class="side-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                </aside>
+            </div>
+        </header>
+        <section class="title">
+            <h1>في القدس... حيث تبدأ الحكاية</h1>
+                <p>"في القدس ريحُ طفولةٍ في الجوّ ريحٌ براءةٍ, فترى الحمام يطيرُ يُعلنُ دولةً في الريح بين </p>
+                <p class="margin_auto">رصاصتين"</p>
+        </section>
+        <section class="description">
+            <div class="text_container">
+                <h3>المسجد الأقصى - قلب القدس النابض</h3>
+                <p>المسجد الأقصى هو أولى القبلتين وثالث الحرمين الشريفين ويقع في قلب مدينة القدسة المحتلة. تبلغ مساحته حوالي 144 دونمًا ويشمل عدة معالم باروة منها قبة الصخرة والمصلى القبلي والمصلى المرواني. يعتبر الأقصى رمزًا دينيًا وتاريخيًا وثقافيًا للشعب الفلسكيني, ومكانًا للمقاومة الروحية والوطنية في وجه الاحتلال المستمر.ئ</p>
+            </div>
+            <img src="./alaqsa2.jpg" alt="">
+        </section>
+        <section class="donation">
+            <h3>ساهم في مساعدة أهل غزة</h3>
+            <p>تبرعك يساهم في صمود العائلات والأطفال. وتخفيف ويلات الحرب.ئ</p>
+            <button>تبرع الآن</button>
+        </section>
+        <section class="boycott_product">
+            <h3>منتجات المقاطعة</h3>
+            <div class="card_container">
+                <div class="card card1">
+                    <button class="tag">آلبسة</button>
+                    <h4>سكتشرز</h4>
+                    <p>شركة أحذية معروفة وعالمية داعمة للكيان</p>
+                    <button class="detail">مشاهدة التفاصيل</button>
+                </div>
+                <div class="card card2">
+                    <button class="tag">مطاعم</button>
+                    <h4>ماكدونالدز</h4>
+                    <p>سلسلة مطاعم الوجبات السريعة التي تدعم الاحتلال من خلال فروعها</p>
+                    <button class="detail">مشاهدة التفاصيل</button>
+                </div>
+                <div class="card card3">
+                    <button class="tag">مشروبات</button>
+                    <h4>كوكا كولا</h4>
+                    <p>شركة المشروبات العالمية التي تدعم الاحتلال</p>
+                    <button class="detail">مشاهدة التفاصيل</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer_title">
+                <h4>فلسطين</h4>
+                <p>موقع تعليمي للتعريف بفلسطين وقضيتها</p>
+            </div>
+            <div class="fast_link">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">عن فلسطين</a></li>
+                    <li><a href="#">المعالم</a></li>
+                    <li><a href="#">التبرع</a></li>
+                    <li><a href="#">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="connect_with_us">
+                <h4>تواصل معنا</h4>
+                <p>البريد الإلكتروني: moaz0k2000@gmail.com</p>
+                <p>الهاتف: 963994207943+</p>
+                <div class="social_media">
+                    <ul>
+                        <li><a href="#">فيسبوك</a></li>
+                        <li><a href="#">x</a></li>
+                        <li><a href="#">انستغرام</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copy_right">
+            <div class="line"></div>
+            <p>حقوق النشر@ 2025-جميع الحقوق محفوظة</p>
+        </div>
+    </div>
+</body>
+</html>
